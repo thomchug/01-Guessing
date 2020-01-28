@@ -5,9 +5,9 @@ assert sys.version_info >= (3,7), "This script requires at least Python 3.7"
 quit = False
 range = 100
 while not quit:
-    #random_number = random.randint(1, range)
+    random_number = random.randint(1, range)
     #testing for right on first try code
-    random_number = 50
+    #random_number = 50
     count = 1
     number = -1
     while number != random_number:
