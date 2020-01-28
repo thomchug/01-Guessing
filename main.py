@@ -8,14 +8,14 @@ while not quit:
     #random_number = random.randint(1, range)
     #testing for right on first try code
     random_number = 50
-    count = 0
+    count = 1
     number = -1
     while number != random_number:
         number = input("Please guess a number between 1 and {}: ".format(range))
         if not number.isdigit():
             print("Please guess a number!")
-        elif number != random_number:
-            number = int(number)
+        number = int(number)
+        if number != random_number:
             count = count + 1
             print("Sorry, that number is incorrect")
             if number > random_number:
@@ -31,9 +31,10 @@ while not quit:
             print("\nIf you keep guessing halfway between the lower and higher values you can find the number a lot faster!")
     if count == 1:
         print("Amazing!!!")
+        print("You guessed it in {} try!".format(count))
     else:
         print("Good job!")
-    print("You guessed it in {} tries!".format(count))
+        print("You guessed it in {} tries!".format(count))
     play_again = input("\nWould you like to play again (yes or no)?")
     play_again = play_again.lower()
     if play_again == "yes" or play_again == "y":
